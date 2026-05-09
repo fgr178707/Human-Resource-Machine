@@ -3,14 +3,23 @@
 可以直接粘贴到游戏
 
 ```
+    JUMP     d
 a:
-    INBOX   
-    COPYTO   0
-    INBOX   
+b:
+    BUMPDN   14
+    JUMPZ    c
+    COPYFROM [14]
     OUTBOX  
-    COPYFROM 0
-    OUTBOX  
-    JUMP     a
+    JUMP     b
+c:
+d:
+e:
+    BUMPUP   14
+    INBOX   
+    JUMPZ    a
+    COPYTO   [14]
+    JUMP     e
+
 ```
 
 #### 截图
